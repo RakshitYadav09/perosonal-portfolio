@@ -15,12 +15,12 @@
         <main class="hobbies__content grid g-x">
             <img class="hobbies__content__sideimage" :src="bridgetSingingGif" />
 
-            <h3 class="hobbies__content__text">
-                Video and photo editing are one of the things I love doing the most
+            <h3 class="hobbies__content__text white-text">
+                <WobblyText text="Love music, cars, tech and watch a lot of racing. I like Pokemon too. I play the piano too sometimes (rare but I'm good at it)." :delay="0.01" />
                 <br><br>
-                I still dunnou what to write here JHDSUOAHFAHDFAJDHFAJKHDAF
+                <WobblyText text="I still really dont know how to fill up this section AJHKFJDVKJHFKJASHDKJHF" :delay="0.01" />
                 <br><br><br>
-                :3
+                <WobblyText text="o(*￣▽￣*)ブ" :delay="0.05" />
             </h3>
         </main>
     </main>
@@ -32,5 +32,19 @@
         grid-template-columns: auto 1fr;
     }
     
-    .hobbies__content__sideimage { width: clamp(5rem, 20dvw, 10rem) }
+    .hobbies__content__sideimage { 
+        width: clamp(5rem, 20dvw, 10rem);
+    }
+
+    .white-text {
+        color: rgb(157, 209, 255) !important;
+    }
+
+    .white-text .wobbly-text {
+        color: rgb(157, 209, 255) !important;
+    }
+
+    .white-text :deep(.wobbly-text) {
+        color: rgb(157, 209, 255) !important;
+    }
 </style>

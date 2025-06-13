@@ -15,8 +15,8 @@
 
 :root {
     --bg-dark:          #191a1a;
-    --fg-light:         #f0e9f4;
-    --color-accent:     #fcbff7;
+    --fg-light:         rgb(134, 193, 252);
+    --color-accent:     rgb(134, 193, 252);
 
     --border-width:     .3rem;
 }
