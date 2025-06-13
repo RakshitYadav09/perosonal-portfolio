@@ -3,7 +3,7 @@
     import WobblyText from "@/components/text/Wobbly.vue";
 
     import arrowIcon from "@/assets/svg/play.svg";
-    import profileImage from "@/assets/img/Generated Image June 04, 2025 - 9_27PM.jpeg";
+    import profileImage from "@/assets/img/Img_2025_06_14_01_30_52~2.jpeg";
 
     let idx = 0;
     let messageIndex = 0;

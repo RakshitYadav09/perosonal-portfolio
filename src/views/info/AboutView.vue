@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import "@/assets/styles/info/base.css";
     import WobblyText from "@/components/text/Wobbly.vue";
-    import mayGif from "@/assets/animations/may_anggy.gif";
+    import PokemonGif from "@/assets/animations/pokemon-pokemon-gen5.gif";
 </script>
 
 <template>
@@ -16,7 +16,7 @@
             <div class="about__layout">
                 <!-- Left side: Image and greeting -->
                 <div class="about__left">
-                    <img class="about__image" :src="mayGif" />
+                    <img class="about__image" :src="PokemonGif" />
                     <div class="about__greeting">
                         <WobblyText text="Heya!" :delay="0.05" />
                         <br>

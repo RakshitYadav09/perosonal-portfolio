@@ -9,12 +9,12 @@
     import vueLogo from "@/assets/svg/vue.svg";
     import gitLogo from "@/assets/svg/git.svg";
     import linuxLogo from "@/assets/svg/linux.svg";
-    
-    // Socials
+
+    // Social media icons from assets
     import githubLogo from "@/assets/svg/github.svg";
-    import twitterLogo from "@/assets/svg/twitter.svg";
-    import youtubeLogo from "@/assets/svg/youtube.svg";
-    import discordLogo from "@/assets/svg/discord.svg";
+    import linkedinLogo from "@/assets/svg/linkedin.svg";
+    import instagramLogo from "@/assets/svg/instagram.svg";
+    import behanceLogo from "@/assets/svg/behance.svg";
 
     let showSocials = ref(false);
 </script>
@@ -84,23 +84,23 @@
             <div v-else class="content full-h full-w" key="socials">
                 <div class="item-list flex g-xxl j-center wrap p-x">
                     <div class="item-wrapper">
-                        <a href="https://github.com/notKimu" target="_blank" class="social-link">
-                            <img class="item" :src="githubLogo" alt="Kimu's Github page">
+                        <a href="https://github.com/RakshitYadav09" target="_blank" class="social-link" rel="noopener noreferrer">
+                            <img class="item github-icon" :src="githubLogo" alt="Rakshit's Github page">
                         </a>
                     </div>
                     <div class="item-wrapper">
-                        <a href="https://twitter.com/notkimu" target="_blank" class="social-link">
-                            <img class="item" :src="twitterLogo" alt="Kimu's Twitter page">
+                        <a href="https://www.linkedin.com/in/rakshityadavv/" target="_blank" class="social-link" rel="noopener noreferrer">
+                            <img class="item" :src="linkedinLogo" alt="Rakshit's LinkedIn profile">
                         </a>
                     </div>
                     <div class="item-wrapper">
-                        <a href="https://www.youtube.com/@kimu_x64" target="_blank" class="social-link">
-                            <img class="item" :src="youtubeLogo" alt="Kimu's Youtube channel">
+                        <a href="https://instagram.com/rakshityadavv" target="_blank" class="social-link" rel="noopener noreferrer">
+                            <img class="item" :src="instagramLogo" alt="Rakshit's Instagram profile">
                         </a>
                     </div>
                     <div class="item-wrapper">
-                        <a href="https://discord.gg/NfeXrQdXdE" target="_blank" class="social-link">
-                            <img class="item" :src="discordLogo" alt="Kimu's Discord server">
+                        <a href="https://behance.com/rezzfx" target="_blank" class="social-link" rel="noopener noreferrer">
+                            <img class="item" :src="behanceLogo" alt="Rakshit's Behance portfolio">
                         </a>
                     </div>
                 </div>
@@ -227,19 +227,28 @@
     }
 
     .item-wrapper:hover {
-        /* background: rgba(134, 193, 252, 0.1); */
         transform: translateY(-4px);
     }
 
     .item {
         height: clamp(2.5rem, 8vw, 4rem);
         width: 70px;
-        filter: saturate(0) brightness(0.8);
+        filter: saturate(0) brightness(0.8) invert(0.9);
         transition: all 0.3s ease;
     }
     
     .item:hover {
         filter: none;
+        transform: scale(1.3);
+    }
+
+    .github-icon {
+        filter: invert(0.9) !important;
+        
+    }
+
+    .github-icon:hover {
+        
         transform: scale(1.3);
     }
 

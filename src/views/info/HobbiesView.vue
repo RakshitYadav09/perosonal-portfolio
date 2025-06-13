@@ -2,7 +2,7 @@
     import "@/assets/styles/info/base.css";
     import WobblyText from "@/components/text/Wobbly.vue";
 
-    import bridgetSingingGif from "@/assets/animations/bridget_walk.gif";
+    import sonicCorriendoGif from "@/assets/animations/sonic-corriendo.gif";
 </script>
 
 <template>
@@ -13,7 +13,9 @@
         </h1>
 
         <main class="hobbies__content grid g-x">
-            <img class="hobbies__content__sideimage" :src="bridgetSingingGif" />
+            <div class="hobbies__content__sideimage">
+                <img :src="sonicCorriendoGif" alt="Sonic running" />
+            </div>
 
             <h3 class="hobbies__content__text white-text">
                 <WobblyText text="Love music, cars, tech and watch a lot of racing. I like Pokemon too. I play the piano too sometimes (rare but I'm good at it)." :delay="0.01" />
@@ -30,10 +32,21 @@
 <style scoped>
     .hobbies__content {
         grid-template-columns: auto 1fr;
+        align-items: start;
+        gap: 2rem;
     }
     
     .hobbies__content__sideimage { 
-        width: clamp(5rem, 20dvw, 10rem);
+        width: clamp(8rem, 30dvw, 15rem);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .hobbies__content__sideimage img {
+        width: 100%;
+        height: auto;
+        max-width: none;
     }
 
     .white-text {
