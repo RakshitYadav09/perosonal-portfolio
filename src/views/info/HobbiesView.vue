@@ -33,7 +33,7 @@
     .hobbies__content {
         grid-template-columns: auto 1fr;
         align-items: start;
-        gap: 2rem;
+        gap: clamp(1rem, 4vw, 2rem);
     }
     
     .hobbies__content__sideimage { 
@@ -47,6 +47,12 @@
         width: 100%;
         height: auto;
         max-width: none;
+        border-radius: 8px;
+    }
+
+    .hobbies__content__text {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        line-height: 1.6;
     }
 
     .white-text {
@@ -59,5 +65,83 @@
 
     .white-text :deep(.wobbly-text) {
         color: rgb(157, 209, 255) !important;
+    }
+
+    /* Tablet styles */
+    @media screen and (max-width: 1024px) {
+        .hobbies__content {
+            gap: clamp(0.8rem, 3vw, 1.5rem);
+        }
+        
+        .hobbies__content__sideimage { 
+            width: clamp(7rem, 25dvw, 12rem);
+        }
+
+        .hobbies__content__text {
+            font-size: clamp(0.85rem, 2.3vw, 1rem);
+        }
+    }
+
+    /* Mobile landscape */
+    @media screen and (max-width: 768px) {
+        .hobbies__content {
+            grid-template-columns: 1fr;
+            gap: clamp(1rem, 4vw, 1.5rem);
+            text-align: center;
+        }
+        
+        .hobbies__content__sideimage { 
+            width: clamp(6rem, 40vw, 10rem);
+            justify-self: center;
+            margin: 0 auto;
+        }
+
+        .hobbies__content__text {
+            font-size: clamp(0.9rem, 2.8vw, 1.1rem);
+            text-align: left;
+        }
+
+        .flex.col.g-xxl {
+            gap: clamp(1.5rem, 5vw, 2rem);
+        }
+    }
+
+    /* Mobile portrait */
+    @media screen and (max-width: 480px) {
+        .hobbies__content {
+            gap: clamp(0.8rem, 3vw, 1.2rem);
+        }
+        
+        .hobbies__content__sideimage { 
+            width: clamp(5rem, 35vw, 8rem);
+        }
+
+        .hobbies__content__text {
+            font-size: clamp(0.8rem, 2.5vw, 1rem);
+            line-height: 1.5;
+        }
+
+        .hobbies__title {
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+        }
+
+        .flex.col.g-xxl {
+            gap: clamp(1rem, 4vw, 1.5rem);
+        }
+    }
+
+    /* Very small screens */
+    @media screen and (max-width: 320px) {
+        .hobbies__content__sideimage { 
+            width: clamp(4rem, 30vw, 6rem);
+        }
+
+        .hobbies__content__text {
+            font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+        }
+
+        .hobbies__title {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+        }
     }
 </style>
