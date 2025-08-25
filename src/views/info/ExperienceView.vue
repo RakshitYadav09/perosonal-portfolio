@@ -6,7 +6,7 @@ const experiences = ref([
     company: "Colt India",
     location: "Gurugram, Haryana",
     position: "Digital Strategy & Architecture Intern",
-    duration: "June 2025 – Present",
+    duration: "June 2025 – August 2025",
     logo: "https://logo.clearbit.com/colt.net",
     description: "Building enterprise systems that actually scale 🏗️",
     achievements: "Engineered architectural components supporting 10,000+ users while mastering TOGAF Zachman framework. Authored 5+ design documents for UK clients and delivered technical analysis for cloud migration proposals across 10+ enterprise systems.",
@@ -45,7 +45,7 @@ const experiences = ref([
   {
     company: "SRMKZILLA",
     location: "SRM Institute",
-    position: "Associate Editorial Lead",
+    position: "Editorial Lead",
     duration: "2023 – Present",
     logo: "https://logo.clearbit.com/srmkzilla.net",
     description: "Visual storyteller for tech events 📱",
