@@ -1,6 +1,11 @@
 <script setup lang="ts">
-  import { RouterLink, RouterView } from "vue-router";
-  import { ref, onMounted } from "vue";
+  import { RouterLink, RouterView, useRoute } from "vue-router";
+  import { ref, onMounted, computed } from "vue";
+
+  const route = useRoute();
+  
+  // Check if current route is projects page
+  const isProjectsPage = computed(() => route.path === '/projects');
 
   let clickCounter = 0;
   function addClick() {
@@ -198,7 +203,7 @@
     <RouterView />
   </div>
 
-  <div class="retro-overlay screen-h screen-w" />
+  <div class="retro-overlay screen-h screen-w" :class="{ 'hidden-on-projects': isProjectsPage }" />
 </template>
 
 <!-- Styles -->
@@ -702,6 +707,10 @@
     pointer-events: none;
     animation: tv-scanlines 40s infinite linear, tv-flicker 8s infinite ease-in-out;
     z-index: 999999999;
+  }
+
+  .retro-overlay.hidden-on-projects {
+    display: none;
   }
 
   @keyframes tv-scanlines {
