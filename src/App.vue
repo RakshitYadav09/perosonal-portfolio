@@ -135,9 +135,8 @@
           <a href="https://drive.google.com/file/d/16Fd0xVBjG2LaHxP9qs_8JB3QZCS7pswt/view?usp=sharing" 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="resume-btn">
-            <span class="resume-icon">📄</span>
-            <span class="resume-text">Resume</span>
+             class="nav__link">
+            Resume
           </a>
           <button @click="toggleMusicPlayer" class="music-toggle-btn">
             <span class="music-icon">♪</span>
@@ -166,10 +165,9 @@
             <a href="https://drive.google.com/file/d/16Fd0xVBjG2LaHxP9qs_8JB3QZCS7pswt/view?usp=sharing" 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="mobile-resume-btn"
+               class="mobile-nav__link"
                @click="closeMobileMenu">
-              <span class="resume-icon">📄</span>
-              <span class="resume-text">Resume</span>
+              Resume
             </a>
           </nav>
         </div>
@@ -321,55 +319,6 @@
     color: var(--color-accent);
     background: rgba(134, 193, 252, 0.2);
     border-color: var(--color-accent);
-  }
-
-  .resume-btn {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.2rem, 1vw, 0.4rem);
-    color: white;
-    background: linear-gradient(135deg, var(--color-accent) 0%, #60a5fa 100%);
-    text-decoration: none;
-    font-size: clamp(0.65rem, 2.2vw, 0.95rem);
-    font-weight: 600;
-    padding: clamp(0.3rem, 1.5vw, 0.7rem) clamp(0.5rem, 2.5vw, 1.4rem);
-    border-radius: 8px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid var(--color-accent);
-    white-space: nowrap;
-    flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(134, 193, 252, 0.3);
-  }
-
-  .resume-btn:hover {
-    background: linear-gradient(135deg, #60a5fa 0%, var(--color-accent) 100%);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(134, 193, 252, 0.5);
-    border-color: #60a5fa;
-  }
-
-  .resume-icon {
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
-    animation: documentFloat 3s ease-in-out infinite;
-  }
-
-  @keyframes documentFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-2px); }
-  }
-
-  .resume-btn:hover .resume-icon {
-    animation: documentBounce 0.6s ease-in-out infinite;
-  }
-
-  @keyframes documentBounce {
-    0%, 100% { transform: translateY(0px) scale(1); }
-    50% { transform: translateY(-4px) scale(1.1); }
-  }
-
-  .resume-text {
-    font-weight: 700;
-    letter-spacing: 0.5px;
   }
 
   .music-toggle-btn {
@@ -547,31 +496,6 @@
     color: var(--color-accent);
     background: rgba(134, 193, 252, 0.2);
     border-color: var(--color-accent);
-  }
-
-  .mobile-resume-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: white;
-    background: linear-gradient(135deg, var(--color-accent) 0%, #60a5fa 100%);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 1.2rem 1.5rem;
-    border-radius: 10px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid var(--color-accent);
-    margin-top: 0.5rem;
-    box-shadow: 0 4px 16px rgba(134, 193, 252, 0.3);
-  }
-
-  .mobile-resume-btn:hover {
-    background: linear-gradient(135deg, #60a5fa 0%, var(--color-accent) 100%);
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 24px rgba(134, 193, 252, 0.5);
-    border-color: #60a5fa;
   }
 
   /* Enhanced Music Player Header Styles */
