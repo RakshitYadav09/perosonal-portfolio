@@ -566,7 +566,8 @@
   }
 
   .projects-title {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.5rem;
   }
 }
